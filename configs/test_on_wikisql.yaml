@@ -1,0 +1,33 @@
+# File Names
+dev_file: "dev.jsonl"
+schema_file: 'wikisql_schema.json'
+middle_name: "database"
+database_path: "datasets/wikisql/"
+
+
+# PROCESSING
+# pandas_transform setting to false can accelerate the program
+pandas_transform: False
+
+# MODEL
+model_name: "Meta-Llama-3.1-8B-Instruct"
+llm_model: ${model_name}
+llm_init_method: "huggingface"
+llm_quantization: "nf4" # 8bit, nf4 or None
+
+embedding_model:  "bge-base-en-v1.5"
+embed_init_method: "huggingface"
+
+
+# output file
+predictions: "predictions/wikisql/predictions_${model_name}.jsonl"
+
+# run a few lines
+limit_lines:   # leave this empty to run all queries, or it will only run first ${limit_lines} rows of queries
+
+
+input_gold: ${database_path}/${dev_file}
+input_pred: ${predictions}
+output_gold: gold_and_pred/wikisql/gold.txt
+output_pred: gold_and_pred/wikisql/pred.txt
+skip_first_row: True

@@ -1,0 +1,31 @@
+# File Names
+dev_file: "mini_dev_sqlite.json"
+schema_file: 'dev_tables.json'
+middle_name: "dev_databases"
+database_path: "datasets/minidev/MINIDEV"
+
+
+# PROCESSING
+# pandas_transform setting to false can accelerate the program
+pandas_transform: False
+
+# MODEL
+model_name: "Codellama-34B-Instruct-hf"
+llm_model: '${model_name}'
+llm_init_method: "huggingface"
+llm_quantization: "8bit" # 8bit, nf4 or None
+
+embedding_model:  "bge-base-en-v1.5"
+embed_init_method: "huggingface"
+
+# output file
+predictions: "predictions/bird-minidev/predictions_${model_name}.jsonl"
+
+# run a few lines
+limit_lines:  # leave this empty to run all queries, or it will only run first ${limit_lines} rows of queries
+
+input_gold: ${database_path}/${dev_file}
+input_pred: ${predictions}
+output_gold: gold_and_pred/bird-minidev/gold.txt
+output_pred: gold_and_pred/bird-minidev/pred.txt
+skip_first_row: True

@@ -1,0 +1,14 @@
+jsonlines==4.0.0
+llama-index==0.10.58
+omegaconf==2.3.0
+pandas==2.2.2
+SQLAlchemy==2.0.31
+torch==2.4.0
+tqdm==4.66.4
+transformers==4.43.3
+llama-index-llms-huggingface==0.2.5
+llama-index-llms-ollama==0.2.2
+llama-index-embeddings-huggingface==0.2.2
+nltk==3.8.1
+sqlparse==0.5.1
+func-timeout == 4.3.5

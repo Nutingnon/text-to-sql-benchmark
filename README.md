@@ -16,6 +16,10 @@ We do zero-shot prediction, the current result is as following:
 [Text-to-SQL LeaderBoard](https://www.yuque.com/alipaypk2xb9iihi/zbpaq8/xevgdnco6mt00cc2?singleDoc#O1Dd)
 ![leadrboard](assets/leaderboard.jpg)
 
+I am doing the test on, let's expecting the result!
+- SQLCoder-7B-2
+- GLM4-9B-Chat
+
 ## Getting Started
 
 ### Prerequisites

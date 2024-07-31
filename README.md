@@ -24,11 +24,12 @@ We do zero-shot prediction, the current result is as following:
 - The tool for evaluation: [test-suite-sql-eval](https://github.com/taoyds/test-suite-sql-eval) 
 
 ### Installation
+I use python 3.11 to build this version. I guess it can be runnable after python $\geq$ 3.8
 
 Clone the repository and install the required Python packages:
 
 ```bash
-git clone https://github.com/yourrepository/text-to-sql-benchmark.git
+git clone https://github.com/Nutingnon/text-to-sql-benchmark.git
 cd text-to-sql-benchmark
 pip install -r requirements.txt
 ```
@@ -52,10 +53,15 @@ Replace `your_config_file.yaml` with the path to your dataset configuration file
 Due to the [test-suite-sql-eval](https://github.com/taoyds/test-suite-sql-eval) is lack of maintainance, it cannot correctly parse many keywords in SQL, such as `CAST` and `UNION ALL`, etc.  To test model's prediction, I modified the script from BIRD-SQL:
 
 ```python
-python evaluation.py --predicted_sql_path <your_sql_path> --ground_truth_path <ground_truth_path> --db_root_path <db_root_path> --pred_key <pred_key> --gold_key <gold_key>
+python evaluation.py \
+    --predicted_sql_path <your_sql_path> \
+    --ground_truth_path <ground_truth_path> \
+    --db_root_path <db_root_path> \
+    --pred_key <pred_key> \
+    --gold_key <gold_key>
 ```
 
-For example, for handling the bird-sql evaluation, we can run
+For example, for handling the `bird-sql` evaluation, we can run
 
 ```python
 python evaluation.py 

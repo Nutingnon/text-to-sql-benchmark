@@ -21,7 +21,7 @@ We do zero-shot prediction, the current result is as following:
 ### Prerequisites
 
 - the datasets that you wish to test on
-- The tool for evaluation: [test-suite-sql-eval](https://github.com/taoyds/test-suite-sql-eval) 
+- The LLM model directory
 
 ### Installation
 I use python 3.11 to build this version. I guess it can be runnable after python $\geq$ 3.8

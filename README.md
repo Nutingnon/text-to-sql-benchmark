@@ -79,7 +79,7 @@ Currently, we support (which means, have tested on) the following datasets:
 - [BIRD-SQL](https://bird-bench.github.io/)
 - [KaggleDBQA](https://www.microsoft.com/en-us/research/publication/kaggledbqa-realistic-evaluation-of-text-to-sql-parsers/)
 
-If you want to test the models on more datasets, please make sure the dataset is organized well, you can refer to the preprocessing code from [UNITE](UNITE: A Unified Benchmark for Text-to-SQL Evaluation) project.
+If you want to test the models on more datasets, please make sure the dataset is organized well, you can refer to the preprocessing code from [UNITE](https://github.com/awslabs/unified-text2sql-benchmark).
 
 ## Call for Contributing
 
